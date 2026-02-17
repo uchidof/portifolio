@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  
+}
+
+/* Barra superior */
+.topbar {
+  height: 60px;
+  background: #111;
+  display: flex;
+}
+
+/* força todos os filhos a ocupar altura total */
+.topbar > * {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* logo */
+.logo {
+  padding: 0 20px;
+  color: #ccc;
+}
+
+.lang-btn {
+  height: 100%;
+  aspect-ratio: 1 / 1;   /* mantém sempre quadrado */
+  border: none;
+  background: #bdbdbd;
+  color: #111;
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-btn:hover{
+    background: #fff;
+}
+
+
+/* menu */
+.menu-right {
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+}
+
+/* botões */
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 22px;
+  background: #bdbdbd;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-left: 1px solid #999;
+  transition: 0.2s;
+}
+
+.menu-item:first-child {
+  border-left: none;
+}
+
+.menu-item:hover {
+  background: #fff;
+}
+
+/* Área principal */
+.hero {
+  background: #003ec5;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+}
+
+/* Caixa da imagem */
+.image-box {
+  width: 300px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* corta sem distorcer */
+}
+
+/* Texto */
+.text-area {
+  color: white;
+  max-width: 450px;
+}
+
+.text-area h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.text-area p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .text-area h1 {
+    font-size: 36px;
+  }
+}
