@@ -6,6 +6,8 @@ const translations = {
     about: "Sobre mim",
     projects: "Projetos",
     contact: "Contato",
+    projectsTitle: "PROJETOS",
+    projectsDescription: "Projetos e experimentos desenvolvidos ao longo da minha jornada.",
   },
   en: {
     title: "HELLO WORLD",
@@ -13,7 +15,9 @@ const translations = {
       "This is my starter portfolio. Here you will find my projects, skills and growth as a developer.",
     about: "About Me",
     projects: "Projects",
-    contact: "Contact"
+    contact: "Contact",
+    projectsTitle: "PROJECTS",
+    projectsDescription: "Projects and experiments built throughout my journey.",
   }
 };
 

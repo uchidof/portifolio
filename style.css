@@ -16,6 +16,10 @@ body {
   height: 60px;
   background: #111;
   display: flex;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* força todos os filhos a ocupar altura total */
@@ -94,6 +98,9 @@ body {
   align-items: center;
   gap: 60px;
   max-width: 1000px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+  /*padding: 1px;*/
 }
 
 /* Caixa da imagem */
@@ -143,4 +150,89 @@ body {
   .text-area h1 {
     font-size: 36px;
   }
+}
+
+
+.projects-section {
+  background: #003ec5;
+  padding: 80px 40px;
+  color: white;
+}
+
+.projects-header h2 {
+  font-size: 56px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.projects-header p {
+  color: #dcdcdc;
+  margin-bottom: 25px;
+}
+
+.tags-filter {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tag {
+  background: #ff6a00;
+  border: none;
+  padding: 8px 18px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.tag.small {
+  padding: 6px 14px;
+  font-size: 11px;
+}
+
+.project-card {
+  background: #cfcfcf;
+  color: #111;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  min-height: 160px;
+
+
+  
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.details-btn:hover {
+  opacity: 0.85;
 }
