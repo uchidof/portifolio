@@ -65,6 +65,8 @@ function renderProjects() {
   carousel.innerHTML = "";
 
   projects.forEach(project => {
+
+    const color = languageColors[project.tag.en] || "#999";
     
     const card = document.createElement("div");
     card.classList.add("project-card");
@@ -73,7 +75,10 @@ function renderProjects() {
       <h3>${project.title[currentLang]}</h3>
       <p>${project.description[currentLang]}</p>
       <div class="card-footer">
-        <span class="tag small">${project.tag[currentLang]}</span>
+        <span class="tag small"
+              style="background:${color}; color:white;">
+          ${project.tag[currentLang]}
+        </span>
         <a href="${project.link}" target="_blank">
           <button class="details-btn">+ Detalhes ➚</button>
         </a>

@@ -13,5 +13,21 @@ const projects = [
       en: "Java"
     },
     link: "https://github.com/uchidof/TrabalhoFinalProjetos"
+  },
+
+  {
+    title: {
+      pt: "Gerenciador de Compras",
+      en: "Shopping Manager"
+    },
+    description: {
+      pt: "Gerenciador de Compras desenvolvido com Vue.js. Para cadastro de produtos, listagem dinâmica e carrinho com atualização automática. Utiliza Vuex para gerenciamento de estado, Vue Router para navegação e persistência com LocalStorage.",
+      en: "Vue.js application for product registration, dynamic listing and cart with automatic updates. Uses Vuex for state management, Vue Router for navigation and LocalStorage persistence."
+    },
+    tag: {
+      pt: "Vue",
+      en: "Vue"
+    },
+    link: "https://github.com/uchidof/T2-COM11270-Gerenciador_de_Compras"
   }
 ];
