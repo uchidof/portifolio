@@ -8,63 +8,49 @@
 
 body {
   background: #111;
-  
 }
 
-/* Barra superior */
+/* ================= HEADER ================= */
+
 .topbar {
   height: 60px;
   background: #111;
   display: flex;
-
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* força todos os filhos a ocupar altura total */
 .topbar > * {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-/* logo */
-.logo {
-  padding: 0 20px;
-  color: #ccc;
-}
-
 .lang-btn {
   height: 100%;
-  aspect-ratio: 1 / 1;   /* mantém sempre quadrado */
+  aspect-ratio: 1 / 1;
   border: none;
   background: #bdbdbd;
   color: #111;
   cursor: pointer;
   font-weight: bold;
-  align-items: center;
   justify-content: center;
 }
 
-.lang-btn:hover{
-    background: #fff;
+.lang-btn:hover {
+  background: #fff;
 }
 
-
-/* menu */
 .menu-right {
   display: flex;
-  height: 100%;
   margin-left: auto;
 }
 
-/* botões */
 .menu-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   padding: 0 22px;
   background: #bdbdbd;
   color: #111;
@@ -83,9 +69,10 @@ body {
   background: #fff;
 }
 
-/* Área principal */
+/* ================= HERO ================= */
+
 .hero {
-  background: #003ec5;
+  background: #0042BD;
   min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
@@ -98,12 +85,12 @@ body {
   align-items: center;
   gap: 60px;
   max-width: 1000px;
-
+  width: 100%;
+  margin: 0 auto;
   border: 1px solid rgba(255,255,255,0.25);
-  /*padding: 1px;*/
+  padding: 20px;
 }
 
-/* Caixa da imagem */
 .image-box {
   width: 300px;
   aspect-ratio: 1/1;
@@ -113,10 +100,9 @@ body {
 .image-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* corta sem distorcer */
+  object-fit: cover;
 }
 
-/* Texto */
 .text-area {
   color: white;
   max-width: 450px;
@@ -152,58 +138,67 @@ body {
   }
 }
 
+/* ================= PROJECTS ================= */
 
 .projects-section {
   background: #003ec5;
-  padding: 80px 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   color: white;
+}
+
+/* Header centralizado */
+.projects-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .projects-header h2 {
   font-size: 56px;
   font-weight: 300;
   margin-bottom: 10px;
-  color: white;
 }
 
 .projects-header p {
   color: #dcdcdc;
-  margin-bottom: 25px;
-}
-
-.tags-filter {
-  display: flex;
-  gap: 15px;
   margin-bottom: 40px;
 }
 
-.tag {
-  background: #ff6a00;
-  border: none;
-  padding: 8px 18px;
-  font-size: 12px;
-  color: white;
-  cursor: pointer;
-  letter-spacing: 1px;
+/* ================= CAROUSEL ================= */
+
+.carousel-wrapper {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
 }
 
-.tag.small {
-  padding: 6px 14px;
-  font-size: 11px;
+.projects-carousel {
+  flex: 1; /* ocupa espaço entre as setas */
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0 40px;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .project-card {
+  flex: 0 0 30%;
+min-width: 280px;
+max-width: 360px;
   background: #cfcfcf;
   color: #111;
   padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
-  min-height: 160px;
-
-
-  
+  min-height: 180px;
 }
 
 .project-card h3 {
@@ -223,6 +218,20 @@ body {
   align-items: center;
 }
 
+.tag {
+  background: #ff6a00;
+  border: none;
+  padding: 8px 18px;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.tag.small {
+  padding: 6px 14px;
+  font-size: 11px;
+}
+
 .details-btn {
   background: black;
   color: white;
@@ -235,4 +244,20 @@ body {
 
 .details-btn:hover {
   opacity: 0.85;
+}
+
+/* ================= CAROUSEL BUTTONS ================= */
+
+.carousel-btn {
+  background: white;
+  color: black;
+  border: none;
+  font-size: 22px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  opacity: 0.8;
 }
