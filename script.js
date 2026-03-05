@@ -64,7 +64,12 @@ prevBtn.addEventListener("click", () => {
 function renderProjects() {
   carousel.innerHTML = "";
 
-  projects.forEach(project => {
+  const filteredProjects = projects.filter(project => {
+    if (activeFilter === "all") return true;
+    return project.tag.pt === activeFilter || project.tag.en === activeFilter;
+  });
+
+  filteredProjects.forEach(project => {
 
     const color = languageColors[project.tag.en] || "#999";
     
@@ -89,4 +94,69 @@ function renderProjects() {
   });
 }
 
+// =================== PROJECTS FILTER ===================
+
+let activeFilter = "all";
+
+const filtersContainer = document.getElementById("projectsFilters");
+
+function generateFilters() {
+
+  const tags = new Set();
+
+  projects.forEach(project => {
+    tags.add(project.tag.en);
+  });
+
+  filtersContainer.innerHTML = "";
+
+  // botão ALL
+  const allBtn = document.createElement("button");
+  allBtn.classList.add("filter-btn", "filter-all", "active");
+  allBtn.dataset.tag = "all";
+  allBtn.textContent = "All";
+
+  filtersContainer.appendChild(allBtn);
+
+  // botões das tags
+  tags.forEach(tag => {
+
+    const btn = document.createElement("button");
+
+    const color = languageColors[tag] || "#999";
+
+    btn.classList.add("filter-btn");
+    btn.dataset.tag = tag;
+    btn.textContent = tag;
+    btn.style.setProperty("--tag-color", color);
+
+    filtersContainer.appendChild(btn);
+
+  });
+
+}
+
+function setupFilters() {
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+
+  filterButtons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      activeFilter = btn.dataset.tag;
+
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      renderProjects();
+
+    });
+
+  });
+
+}
+
+generateFilters();
+setupFilters();
 renderProjects();

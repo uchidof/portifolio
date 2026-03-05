@@ -160,6 +160,30 @@ body {
   margin-bottom: 40px;
 }
 
+/* ================= PROJECTS FILTER ================= */
+
+.projects-filters {
+  display: flex;
+  gap: 10px;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  background: #cfcfcf;
+  color: #111;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.filter-btn.active {
+  background: black;
+  color: white;
+}
+
 /* ================= CAROUSEL ================= */
 
 .carousel-wrapper {
@@ -194,6 +218,7 @@ max-width: 360px;
   flex-direction: column;
   justify-content: space-between;
   min-height: 180px;
+  border: 1px solid #111;
 }
 
 .project-card h3 {
@@ -243,16 +268,42 @@ max-width: 360px;
 
 /* ================= CAROUSEL BUTTONS ================= */
 
-.carousel-btn {
-  background: white;
-  color: black;
+.filter-btn {
   border: none;
-  font-size: 22px;
-  padding: 12px 16px;
+  padding: 6px 14px;
+  font-size: 12px;
   cursor: pointer;
-  z-index: 2;
+  letter-spacing: 1px;
+
+  background: var(--tag-color);
+  color: white;
+
+  transition: 0.2s;
 }
 
-.carousel-btn:hover {
-  opacity: 0.8;
+.filter-btn.active {
+  background: black;
+  color: white;
+}
+
+.filter-btn:hover:not(.active) {
+  background: white;
+  color: black;
+}
+
+/* ===== FILTER BUTTON ALL ===== */
+
+.filter-all {
+  background: #bdbdbd;
+  color: #111;
+}
+
+.filter-all:hover:not(.active) {
+  background: white;
+  color: black;
+}
+
+.filter-all.active {
+  background: black;
+  color: white;
 }
