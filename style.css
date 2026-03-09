@@ -10,6 +10,12 @@ body {
   background: #111;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
 /* ================= HEADER ================= */
 
 .topbar {
@@ -144,9 +150,7 @@ body {
 
 /* Header centralizado */
 .projects-header {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
+  margin-bottom: 40px;
 }
 
 .projects-header h2 {
@@ -165,7 +169,6 @@ body {
 .projects-filters {
   display: flex;
   gap: 10px;
-  padding: 0 40px;
   margin-bottom: 30px;
 }
 
@@ -191,16 +194,16 @@ body {
   margin-top: 40px;
   display: flex;
   align-items: center;
+  
 }
 
 .projects-carousel {
-  flex: 1; /* ocupa espaço entre as setas */
+  flex: 1;
   display: flex;
   gap: 30px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  padding: 0 40px;
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -209,8 +212,8 @@ body {
 
 .project-card {
   flex: 0 0 30%;
-min-width: 280px;
-max-width: 360px;
+  min-width: 280px;
+  max-width: 360px;
   background: #cfcfcf;
   color: #111;
   padding: 25px;
@@ -262,10 +265,11 @@ max-width: 360px;
   letter-spacing: 1px;
 }
 
-.details-btn:hover {
-  opacity: 0.85;
+.details-btn:hover:not(.active) {
+  background: white;
+  color: black;
+  box-shadow: inset 0 0 0 1px #111;
 }
-
 /* ================= CAROUSEL BUTTONS ================= */
 
 .filter-btn {
@@ -306,4 +310,33 @@ max-width: 360px;
 .filter-all.active {
   background: black;
   color: white;
+}
+
+/* ================= CAROUSEL ARROWS ================= */
+
+.carousel-btn {
+  width: 48px;
+  height: 48px;
+
+  background: black;
+  color: white;
+
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  flex-shrink: 0;
+
+  transition: 0.2s;
+}
+
+.carousel-btn:hover {
+  background: white;
+  color: black;
 }
