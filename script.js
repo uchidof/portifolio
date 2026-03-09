@@ -9,7 +9,9 @@ const translations = {
     projects: "Projetos",
     contact: "Contato",
     projectsTitle: "PROJETOS",
-    projectsDescription: "Projetos e experimentos desenvolvidos ao longo da minha jornada."
+    projectsDescription: "Projetos e experimentos desenvolvidos ao longo da minha jornada.",
+    contactTitle: "CONTATO",
+    contactDescription: "Interessado em trabalhar juntos ou tem alguma pergunta?"
   },
   en: {
     title: "HELLO WORLD!",
@@ -19,7 +21,9 @@ const translations = {
     projects: "Projects",
     contact: "Contact",
     projectsTitle: "PROJECTS",
-    projectsDescription: "Projects and experiments built throughout my journey."
+    projectsDescription: "Projects and experiments built throughout my journey.",
+    contactTitle: "CONTACT",
+    contactDescription: "Interested in working together or have a question?"
   }
 };
 

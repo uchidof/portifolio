@@ -340,3 +340,102 @@ body {
   background: white;
   color: black;
 }
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+  background: #0042BD;
+  color: white;
+  padding: 80px 0;
+}
+
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 56px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #cfcfcf;
+}
+
+/* CONTACT LIST */
+.contact-list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* item */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+
+  transition: all 0.3s ease;
+}
+
+/* ícone */
+
+.contact-item img {
+  width: 60px;
+  height: 60px;
+  background: #cfcfcf;
+  padding: 14px;
+  flex-shrink: 0;
+}
+
+/* texto escondido */
+
+.contact-label {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 14px;
+  padding-right: 14px;
+}
+
+/* hover expande */
+
+.contact-item:hover:not(.active) {
+  width: auto;
+  background: white;
+}
+
+.contact-item:hover:not(.active) .contact-label {
+  opacity: 1;
+  color: black;
+}
+
+.contact-item:hover:not(.active) img {
+  background: white;
+}
+
+@media (max-width: 768px) {
+
+  .contact-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .contact-item {
+    width: auto;
+  }
+
+  .contact-label {
+    opacity: 1;
+  }
+
+}
