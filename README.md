@@ -1,4 +1,4 @@
-# Portfolio (work in progress)
+# Portfolio
 
 My personal portfolio built with HTML, CSS and JavaScript.
 
