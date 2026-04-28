@@ -1,5 +1,20 @@
 const projects = [
   {
+  title: {
+    pt: "DENGUEGO – App de Monitoramento de Dengue",
+    en: "DENGUEGO – Dengue Monitoring App"
+  },
+  description: {
+    pt: "Aplicativo mobile desenvolvido com Flutter para registro e monitoramento de focos de dengue utilizando gamificação e dados geográficos. Trabalho de Conclusão de Curso (TCC).",
+    en: "Mobile application developed with Flutter for reporting and monitoring dengue hotspots using gamification and geospatial data. Final Undergraduate Project (TCC)."
+  },
+  tag: {
+    pt: "Dart",
+    en: "Dart"
+  },
+  link: "https://computacao.alegre.ufes.br/sites/computacao.alegre.ufes.br/files/field/anexo/tcc2_filipeuchidomaribento-versaofinalaprovadocompleto.pdf"
+},
+  {
     title: {
       pt: "Sistema de Gerenciamento de Usuários",
       en: "User Management System"
@@ -60,4 +75,5 @@ const projects = [
     },
     link: "https://github.com/uchidof/T2-COM10396-Laboratorios"
   },
+  
 ];
